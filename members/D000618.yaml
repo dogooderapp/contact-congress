@@ -1,8 +1,9 @@
 bioguide: D000618
 contact_form:
   method: post
-  action: http://www.daines.senate.gov/connect/email-steve
+  action: "http://www.daines.senate.gov/connect/email-steve"
   steps:
+<<<<<<< HEAD
   - visit: http://www.daines.senate.gov/connect/email-steve
   - wait:
     - value: 10
@@ -321,6 +322,11 @@ contact_form:
       selector: h1
 =======
     - visit: "http://www.daines.senate.gov/connect/email-steve"
+=======
+    - visit: "http://www.daines.senate.gov/connect/email-steve"
+    - wait:
+        - value: 10
+>>>>>>> parent of 403d056... more new YAMLs and tweaks
     - select:
         - name: input_AE7457DD-4040-F985-52CD-B99385041C51
           selector: "#actiontog"
@@ -334,7 +340,11 @@ contact_form:
             Tour Request: tour
             Request a flag to be flown over the Capitol: flag
     - wait:
+<<<<<<< HEAD
         - value: 2
+=======
+        - value: 10
+>>>>>>> parent of 403d056... more new YAMLs and tweaks
     - fill_in:
         - name: input_AB59F0AE-4040-F985-52CD-AA63153C7925
           selector: "#input-AB59F0AE-4040-F985-52CD-AA63153C7925"
@@ -629,9 +639,12 @@ contact_form:
     - click_on:
         - value: Submit
           selector: input.btn
+<<<<<<< HEAD
     - find:
         - value: "Thank You"
           selector: "h1"
+=======
+>>>>>>> parent of 403d056... more new YAMLs and tweaks
   success:
     headers:
       status: 200

@@ -1,8 +1,9 @@
 bioguide: S000770
 contact_form:
   method: post
-  action: https://www.stabenow.senate.gov/contact
+  action: "https://www.stabenow.senate.gov/contact"
   steps:
+<<<<<<< HEAD
   - visit: https://www.stabenow.senate.gov/contact
   - wait:
     - value: 2
@@ -58,6 +59,9 @@ contact_form:
     - visit: "https://www.stabenow.senate.gov/contact"
     - wait:
         - value: 2
+=======
+    - visit: "https://www.stabenow.senate.gov/contact"
+>>>>>>> parent of 403d056... more new YAMLs and tweaks
     - fill_in:
         - name: input_F80AC606-4040-F985-52CD-88C5E17C2923
           selector: "#input-F80AC606-4040-F985-52CD-88C5E17C2923"
@@ -104,9 +108,12 @@ contact_form:
     - click_on:
         - value: Submit
           selector: input.btn
+<<<<<<< HEAD
     - find:
         - value: "Thank You"
           selector: "h1"
+=======
+>>>>>>> parent of 403d056... more new YAMLs and tweaks
   success:
     headers:
       status: 200
