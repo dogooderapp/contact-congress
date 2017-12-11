@@ -4,6 +4,7 @@ contact_form:
   action: /contact/write-martin
   steps:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - visit: http://www.heinrich.senate.gov/contact/write-martin
   - select:
     - name: topic
@@ -192,6 +193,9 @@ contact_form:
       value: Thank You
 =======
     - visit: "http://www.heinrich.senate.gov/contact/write-martin"
+=======
+    - visit: "https://www.heinrich.senate.gov/contact/write-martin"
+>>>>>>> unitedstates/master
     - select:
         - name: topic
           selector: "#contactForm select[name='topic']" 
@@ -199,6 +203,7 @@ contact_form:
           required: true
           options:
             Agriculture/Food Safety: Agriculture/Food Safety
+            Animal Welfare: Animal Welfare
             "Banking & Financial Services": Banking and Financial Services
             Border Security: Border Security
             Budget: Budget
@@ -235,7 +240,7 @@ contact_form:
             "Transportation & Infrastructure": "Transportation & Infrastructure"
             Veterans: Veterans
             Welfare/Food Assistance: Welfare/Food Assistance
-            Wildlife/Animal Welfare: Wildlife/Animal Welfare
+            Wildlife: Wildlife
             "Women's Issues": "Women's Issues"
     - wait:
         - value: 3

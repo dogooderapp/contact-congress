@@ -1,9 +1,9 @@
-bioguide: V000128
+bioguide: S001202
 contact_form:
   method: post
   action: /content/contact-senator
   steps:
-    - visit: "https://www.vanhollen.senate.gov/content/contact-senator"
+    - visit: "https://www.strange.senate.gov/content/contact-senator"
     - fill_in:
         - name: "submitted[constituent_information][first_name]"
           selector: "#edit-submitted-constituent-information-first-name"
@@ -25,10 +25,6 @@ contact_form:
           selector: "#edit-submitted-constituent-information-zip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: "submitted[constituent_information][phone]"
-          selector: "#edit-submitted-constituent-information-phone"
-          value: $PHONE
-          required: false
         - name: "submitted[constituent_information][email]"
           selector: "#edit-submitted-constituent-information-email"
           value: $EMAIL
@@ -64,68 +60,44 @@ contact_form:
           value: $TOPIC
           required: true
           options:
-            - Abortion
-            - Adoption
-            - Aging
             - Agriculture
-            - Animal Welfare
-            - Appropriations
+            - Armed Services
             - Banking
-            - Campaign Finance
-            - Children
-            - Communications
-            - Congratulations
-            - Congressional Issues
+            - Budget and Appropriations
+            - Courts
             - Crime
-            - Defense
-            - Drugs
-            - Economy
-            - Education Higher
-            - Education K through 12
-            - Elections
+            - Education
             - Energy
             - Environment
-            - Family
-            - Federal Employees Issues
-            - Food Stamps
+            - FEMA
+            - Fisheries
             - Foreign Affairs
             - Government Reform
-            - Gun Control
-            - Health
-            - Help with Federal Agencies
-            - Homeland Security
-            - Housing
+            - Healthcare
             - Immigration
             - Inauguration
-            - Insurance Health
-            - Insurance Other
-            - Interior
-            - Iran
-            - Iraq
-            - Israel
-            - Judiciary
-            - Labor
-            - Medicaid
-            - Medicare
-            - Military
-            - NASA
-            - Nominations
-            - Nutrition
+            - Insurance
+            - Labor 
+            - Livestock
+            - National Parks and Forests
+            - National Security
             - Other
-            - Passports
-            - Patents
+            - Peanuts
             - Pensions
+            - Poultry
+            - Second Amendment Issues
             - Securities
-            - Service Academies
-            - Small Business
+            - SNAP / WIC
             - Social Security
-            - Taxes
-            - Tobacco
+            - Space / NASA
+            - Tax
+            - Technology
+            - Timber
             - Trade
             - Transportation
-            - Veterans
+            - Housing / Urban Affairs
             - Welfare
-            - "Women's Issues"
+            - Women's Issues
     - javascript:
         - value: document.querySelector("#edit-submitted-message-details-message").value = document.querySelector("#edit-submitted-message-details-message").value.replace(/"/g, '');
     - click_on:

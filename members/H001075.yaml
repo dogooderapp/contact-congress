@@ -1,133 +1,110 @@
 bioguide: H001075
 contact_form:
   method: post
-  action: /content/contact-senator
+  action: "https://www.harris.senate.gov/contact/email"
   steps:
-    - visit: "https://www.harris.senate.gov/content/contact-senator"
+    - visit: "https://www.harris.senate.gov/contact/email"
+    - find:
+        - selector: "#input-67423504-9AAC-EB15-51B1-3DF559E135D4"
     - fill_in:
-        - name: "submitted[constituent_information][first_name]"
-          selector: "#edit-submitted-constituent-information-first-name"
+        - name: "input_67423504-9AAC-EB15-51B1-3DF559E135D4"
+          selector: "#input-67423504-9AAC-EB15-51B1-3DF559E135D4"
           value: $NAME_FIRST
           required: true
-        - name: "submitted[constituent_information][last_name]"
-          selector: "#edit-submitted-constituent-information-last-name"
+        - name: "input_67423519-DD68-8D83-92BB-023E9CDE7E25"
+          selector: "#input-67423519-DD68-8D83-92BB-023E9CDE7E25"
           value: $NAME_LAST
           required: true
-        - name: "submitted[constituent_information][address_1]"
-          selector: "#edit-submitted-constituent-information-address-1"
+        - name: "input_674731A9-DC93-F057-3129-DDFC402FFCF6"
+          selector: "#input-674731A9-DC93-F057-3129-DDFC402FFCF6"
           value: $ADDRESS_STREET
           required: true
-        - name: "submitted[constituent_information][city]"
-          selector: "#edit-submitted-constituent-information-city"
+        - name: "input_67473231-0058-AF90-5FA2-9D4977FFAE08"
+          selector: "#input-67473231-0058-AF90-5FA2-9D4977FFAE08"
           value: $ADDRESS_CITY
           required: true
-        - name: "submitted[constituent_information][zip]"
-          selector: "#edit-submitted-constituent-information-zip"
+        - name: "input_67473264-EF36-677B-E5BD-177CC730BF76"
+          selector: "#input-67473264-EF36-677B-E5BD-177CC730BF76"
           value: $ADDRESS_ZIP5
           required: true
-        - name: "submitted[constituent_information][phone]"
-          selector: "#edit-submitted-constituent-information-phone"
+        - name: "input_674C04D0-0622-BF1E-6BED-994E3BDE74CF"
+          selector: "#input-674C04D0-0622-BF1E-6BED-994E3BDE74CF"
           value: $PHONE
-          required: false
-        - name: "submitted[constituent_information][email]"
-          selector: "#edit-submitted-constituent-information-email"
+          required: true
+        - name: "input_674B231A-C4E6-DE6B-8AF8-F735101D38C5"
+          selector: "#email"
           value: $EMAIL
           required: true
-        - name: "submitted[message_details][please_type_the_subject_of_your_message]"
-          selector: "#edit-submitted-message-details-please-type-the-subject-of-your-message"
+        - name: "input_674B2464-04AE-529C-EF20-DA82FEC8CAFC"
+          selector: "#input-674B2464-04AE-529C-EF20-DA82FEC8CAFC"
+          value: $EMAIL
+          required: true
+        - name: "input_8896A1BE-5056-A066-604F-3010D7864A7D"
+          selector: "#input-8896A1BE-5056-A066-604F-3010D7864A7D"
           value: $SUBJECT
           required: true
-        - name: "submitted[message_details][message]"
-          selector: "#edit-submitted-message-details-message"
+        - name: "input_6772B6F9-DC60-985A-DA90-CE9C6D99704B"
+          selector: "#input-6772B6F9-DC60-985A-DA90-CE9C6D99704B"
           value: $MESSAGE
           required: true
     - select:
-        - name: "submitted[constituent_information][prefix]"
-          selector: "#edit-submitted-constituent-information-prefix"
+        - name: "input_674234EB-FE2E-E1D2-DA0B-544DB1E29219"
+          selector: "#input-674234EB-FE2E-E1D2-DA0B-544DB1E29219"
           value: $NAME_PREFIX
           required: true
           options:
             - Mr.
             - Mrs.
             - Ms.
-            - Mr. and Mrs.
             - Dr.
-            - Dr. and Mrs.
             - Reverend
             - Sister
-            - Pastor
-            - The Honorable
-            - Representative
-            - Senator
-        - name: "submitted[message_details][topic]"
-          selector: "#edit-submitted-message-details-topic"
+    - choose:
+        - name: "input_6753407D-EBDA-2CAE-490E-28C4444D2907"
+          selector: "[type='radio'][name='input_6753407D-EBDA-2CAE-490E-28C4444D2907']"
           value: $TOPIC
           required: true
           options:
-            - Abortion
-            - Adoption
-            - Aging
-            - Agriculture
-            - Animal Welfare
-            - Appropriations
-            - Banking
-            - Campaign Finance
-            - Children
-            - Civil Rights
-            - Commerce
-            - Communications
-            - Congratulations
-            - Congressional Issues
-            - Crime
-            - Defense
-            - Drugs
-            - Economy
-            - Education Higher
-            - Education K through 12
-            - Elections
-            - Energy
-            - Environment
-            - Family
-            - Food Stamps
-            - Foreign Affairs
-            - Gun Control
-            - Health
-            - Homeland Security
-            - Housing
-            - Immigration
-            - Inauguration
-            - Insurance Health
-            - Insurance Other
-            - Interior
-            - Iran
-            - Iraq
-            - Judiciary
-            - Labor
-            - Medicaid
-            - Medicare
-            - Military
-            - NASA
-            - Nutrition
-            - Other
-            - Patents
-            - Pensions
-            - Securities
-            - Small Business
-            - Social Security
-            - Taxes
-            - Tobacco
-            - Trade
-            - Transportation
-            - Veterans
-            - Welfare
-            - "Women's Issues"
+            Abortion: 927F1873-5056-A066-60E9-8B4B12594845
+            Agriculture: 927F189E-5056-A066-60A6-CD0C9228F78D
+            Arts/Humanities: 927F18D2-5056-A066-6003-E68078DD47A4
+            Budget: 927F18FD-5056-A066-60E9-7AECAFA4DC11
+            Animal Welfare: 927F1927-5056-A066-60A5-1296BDD760E3
+            Campaign Finance/Election Reform: 927F1953-5056-A066-60F0-D9A3C38EA6B5
+            Criminal Justice: 927F1981-5056-A066-6064-A887CFC96DBD
+            Economy/Jobs: 927F19AC-5056-A066-6052-634AEE123621
+            Civil Rights: 927F19D6-5056-A066-6036-7F299C4BF899
+            Education: 927F1A01-5056-A066-6035-CFB91C220F49
+            Gun Safety: 927F1A2C-5056-A066-606F-3BFF80FE8E60
+            Defense: 927F1A58-5056-A066-60EE-0DD3748FEB5F
+            Homeland Security/Disaster Response: 927F1A83-5056-A066-6047-076CFD34D6FF
+            Native American Affairs: 927F1AB1-5056-A066-6055-64216CC3749D
+            Energy: 927F1ADD-5056-A066-606A-1962A0EEE08F
+            Science/Technology: 927F1B0A-5056-A066-60EA-1ED0DBB3283F
+            Environment: 927F1B37-5056-A066-6053-AA870C262051
+            Telecommunications/FCC: 927F1B63-5056-A066-601E-EFEA24AC5308
+            Foreign Affairs: 927F1B8F-5056-A066-6025-3FE022989DFB
+            Health: 927F1BBA-5056-A066-6054-06869F98B4E0
+            Housing: 927F1C2B-5056-A066-6045-64ACA7CEA9BA
+            Immigration: 927F1C55-5056-A066-60F7-380E67CAB6BF
+            Judiciary: 927F1C7E-5056-A066-60EA-E33CDC0B3217
+            Labor: 927F1CA6-5056-A066-60F5-6F16D7DF2854
+            Social Security: 927F1CD1-5056-A066-60B7-8188E92E02EF
+            Taxes: 927F1D12-5056-A066-6049-B310B0FE5384
+            Trade: 927F1D3F-5056-A066-6056-05560978B6D3
+            Transportation: 927F1D69-5056-A066-6017-D8F48BB54DE2
+            Veterans: 927F1D93-5056-A066-6011-096FAD02EC71
+            Welfare: 927F1DC4-5056-A066-6023-CBB831C6B69B
     - javascript:
-        - value: document.querySelector("#edit-submitted-message-details-message").value = document.querySelector("#edit-submitted-message-details-message").value.replace(/"/g, '');
+        - value: document.querySelector("#input-6772B6F9-DC60-985A-DA90-CE9C6D99704B").value = document.querySelector("#input-6772B6F9-DC60-985A-DA90-CE9C6D99704B").value.replace(/"/g, '');
     - click_on:
         - value: Submit
-          selector: "#webform-client-form-78 input[name='op']"
+          selector: ".btn"
+    - find:
+        - value: "Thank You"
+          selector: "h1"
   success:
     headers:
       status: 200
     body:
-      contains: "Thank you, your message has been received."
+      contains: "Thank you for contacting my office."

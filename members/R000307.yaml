@@ -44,7 +44,7 @@ contact_form:
           required: true
           options:
             - Government Shutdown
-            - Health Care Costs
+            - Health Care
             - Economy/Jobs
             - Gas Prices
             - Immigration
@@ -68,7 +68,6 @@ contact_form:
             - Global Warming
             - Government Affairs
             - Gun Control
-            - Health Care-General
             - Housing
             - Intelligence Issues
             - Judiciary
@@ -84,9 +83,8 @@ contact_form:
             - Other
     - recaptcha:
         - value: true
-    - click_on:
-        - value: "Submit"
-          selector: input.primaryAction
+    - javascript:
+        - value: document.querySelector("input.primaryAction").click();
     - wait:
         - value: 1
   success:
